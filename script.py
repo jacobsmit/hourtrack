@@ -7,8 +7,8 @@ wks = sh.worksheet("Tracker")
 days = wks.get("C2:AA366")
 
 avg_mood_with_activity = {"0": 0, "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0, "10": 0, "total": 0}
-sum_mood_with_activity = {"0": 0, "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0, "10": 0, "total": 0}
-days_with_activity = {"0": 0, "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0, "10": 0, "total": 0}
+sum_mood_with_activity = avg_mood_with_activity.copy()
+days_with_activity = avg_mood_with_activity.copy()
 
 for day in days :
     days_with_activity["total"] += 1
